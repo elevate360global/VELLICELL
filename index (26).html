@@ -1,0 +1,1305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vellicell Clinic Seoul | Premium Korean Medical Aesthetics</title>
+  <meta name="description" content="Private, premium aesthetic clinic in Gangnam Seoul. Director consultation, genuine products, same price for locals & visitors. English, Chinese, Japanese support.">
+  <meta property="og:title" content="Vellicell Clinic Seoul">
+  <meta property="og:description" content="Beyond Beauty. Back to Origin. Premium Korean Medical Aesthetics in Gangnam.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --orange: #E8521A;
+      --orange-light: #F47340;
+      --green: #1E3A2F;
+      --green-light: #2C5040;
+      --dark: #141414;
+      --mid: #6B6B6B;
+      --light: #F2EFEB;
+      --white: #FFFFFF;
+      --border: #E0DDD8;
+      --font-display: 'Cormorant Garamond', Georgia, serif;
+      --font-body: 'Inter', system-ui, sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-body);
+      color: var(--dark);
+      background: var(--white);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── STICKY BOOK NOW ── */
+    .sticky-cta {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 999;
+    }
+    .sticky-cta a {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--orange);
+      color: var(--white);
+      font-family: var(--font-body);
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 14px 24px;
+      border-radius: 40px;
+      box-shadow: 0 8px 32px rgba(232,82,26,0.35);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .sticky-cta a:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 40px rgba(232,82,26,0.45);
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 900;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 48px;
+      height: 72px;
+      background: rgba(20,20,20,0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+    .nav-logo {
+      font-family: var(--font-display);
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--white);
+      letter-spacing: 0.04em;
+      text-decoration: none;
+    }
+    .nav-logo span { color: var(--orange); }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+    .nav-links a {
+      color: rgba(255,255,255,0.75);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--white); }
+    .nav-book {
+      background: var(--orange);
+      color: var(--white) !important;
+      padding: 10px 20px;
+      border-radius: 4px;
+      transition: background 0.2s !important;
+    }
+    .nav-book:hover { background: var(--orange-light) !important; color: var(--white) !important; }
+
+    /* ── PLACEHOLDER IMAGES ── */
+    .img-ph {
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, #2a2a2a 0%, #3d3028 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      color: rgba(255,255,255,0.4);
+      font-size: 12px;
+      font-family: var(--font-body);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      text-align: center;
+      padding: 20px;
+    }
+    .img-ph::before {
+      content: '';
+      width: 40px;
+      height: 40px;
+      border: 2px solid rgba(255,255,255,0.2);
+      border-radius: 4px;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='rgba(255,255,255,0.3)' stroke-width='1.5'%3E%3Crect x='3' y='3' width='18' height='18' rx='2'/%3E%3Ccircle cx='8.5' cy='8.5' r='1.5'/%3E%3Cpath d='M21 15l-5-5L5 21'/%3E%3C/svg%3E") center/24px no-repeat;
+    }
+    .img-ph.light {
+      background: linear-gradient(135deg, #e8e3dc 0%, #d4cdc4 100%);
+      color: rgba(0,0,0,0.3);
+    }
+    .img-ph.light::before {
+      border-color: rgba(0,0,0,0.15);
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='rgba(0,0,0,0.25)' stroke-width='1.5'%3E%3Crect x='3' y='3' width='18' height='18' rx='2'/%3E%3Ccircle cx='8.5' cy='8.5' r='1.5'/%3E%3Cpath d='M21 15l-5-5L5 21'/%3E%3C/svg%3E");
+    }
+
+    /* ── HERO ── */
+    .hero {
+      position: relative;
+      height: 100vh;
+      min-height: 640px;
+      overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+    }
+    .hero-bg .img-ph { background: linear-gradient(160deg, #1a1209 0%, #2d1e10 50%, #0f1a14 100%); }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.55) 60%, rgba(0,0,0,0.8) 100%);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 80px 24px 60px;
+    }
+    .hero-eyebrow {
+      font-family: var(--font-body);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 20px;
+    }
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(52px, 8vw, 110px);
+      font-weight: 300;
+      line-height: 1.0;
+      color: var(--white);
+      letter-spacing: -0.01em;
+      margin-bottom: 20px;
+    }
+    .hero-title em {
+      font-style: italic;
+      font-weight: 300;
+    }
+    .hero-tagline {
+      font-family: var(--font-display);
+      font-size: clamp(16px, 2.5vw, 24px);
+      font-weight: 300;
+      font-style: italic;
+      color: rgba(255,255,255,0.7);
+      letter-spacing: 0.04em;
+      margin-bottom: 14px;
+    }
+    .hero-pills {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 40px;
+    }
+    .hero-pill {
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      color: rgba(255,255,255,0.65);
+      border: 1px solid rgba(255,255,255,0.2);
+      padding: 6px 14px;
+      border-radius: 20px;
+    }
+    .btn-primary {
+      display: inline-block;
+      background: var(--orange);
+      color: var(--white);
+      font-family: var(--font-body);
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 16px 40px;
+      border-radius: 4px;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .btn-primary:hover { background: var(--orange-light); transform: translateY(-1px); }
+    .btn-outline {
+      display: inline-block;
+      background: transparent;
+      color: var(--white);
+      font-family: var(--font-body);
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 16px 40px;
+      border: 1px solid rgba(255,255,255,0.4);
+      border-radius: 4px;
+      transition: border-color 0.2s, background 0.2s;
+      margin-left: 14px;
+    }
+    .btn-outline:hover { border-color: var(--white); background: rgba(255,255,255,0.08); }
+    .hero-scroll {
+      position: absolute;
+      bottom: 32px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      color: rgba(255,255,255,0.4);
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+    .hero-scroll::after {
+      content: '';
+      width: 1px;
+      height: 40px;
+      background: linear-gradient(to bottom, rgba(255,255,255,0.4), transparent);
+    }
+
+    /* ── TRUST BAR ── */
+    .trust-bar {
+      background: var(--green);
+      padding: 20px 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 48px;
+      flex-wrap: wrap;
+    }
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: rgba(255,255,255,0.85);
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.03em;
+    }
+    .trust-item .check {
+      width: 20px;
+      height: 20px;
+      background: var(--orange);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      flex-shrink: 0;
+    }
+    .trust-divider {
+      width: 1px;
+      height: 20px;
+      background: rgba(255,255,255,0.2);
+    }
+
+    /* ── SECTIONS ── */
+    section { scroll-margin-top: 72px; }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 48px;
+    }
+
+    .section-label {
+      font-family: var(--font-body);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 14px;
+    }
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(32px, 4vw, 52px);
+      font-weight: 300;
+      line-height: 1.15;
+      color: var(--dark);
+      margin-bottom: 20px;
+    }
+    .section-title em { font-style: italic; }
+    .section-body {
+      font-size: 16px;
+      color: var(--mid);
+      line-height: 1.75;
+      max-width: 520px;
+    }
+
+    /* ── ABOUT ── */
+    #about { padding: 100px 0; }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    .about-image {
+      height: 540px;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .about-features {
+      margin-top: 36px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .about-feature {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 14px;
+      color: var(--dark);
+      font-weight: 500;
+    }
+    .about-feature .dot {
+      width: 6px;
+      height: 6px;
+      background: var(--orange);
+      border-radius: 50%;
+      margin-top: 7px;
+      flex-shrink: 0;
+    }
+    .location-block {
+      margin-top: 36px;
+      padding: 24px;
+      background: var(--light);
+      border-radius: 4px;
+      border-left: 3px solid var(--orange);
+    }
+    .location-block h4 {
+      font-family: var(--font-body);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 12px;
+    }
+    .location-block p {
+      font-size: 14px;
+      color: var(--mid);
+      line-height: 1.7;
+    }
+    .location-block p strong { color: var(--dark); font-weight: 600; }
+
+    /* ── GALLERY ── */
+    #gallery { padding: 0 0 100px; }
+    .gallery-label {
+      padding: 0 48px 32px;
+    }
+    .gallery-floor {
+      margin-bottom: 48px;
+    }
+    .floor-title {
+      font-family: var(--font-display);
+      font-size: 28px;
+      font-weight: 300;
+      color: var(--dark);
+      padding: 0 48px;
+      margin-bottom: 20px;
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      padding: 0 48px;
+    }
+    .gallery-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 4px;
+    }
+    .gallery-card .img-ph {
+      height: 260px;
+      background: linear-gradient(135deg, #1c1c1c 0%, #2e2620 100%);
+    }
+    .gallery-caption {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      padding: 16px;
+      background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+      color: var(--white);
+      font-size: 13px;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .gallery-caption .star { color: var(--orange); font-size: 10px; }
+
+    /* ── WHY CHOOSE ── */
+    #why { padding: 100px 0; background: var(--light); }
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      margin-top: 52px;
+    }
+    .why-card {
+      background: var(--white);
+      padding: 32px 24px;
+      border-radius: 4px;
+      border-bottom: 3px solid transparent;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .why-card:hover { border-color: var(--orange); transform: translateY(-4px); }
+    .why-icon {
+      width: 44px;
+      height: 44px;
+      background: rgba(232,82,26,0.08);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+      font-size: 20px;
+    }
+    .why-card h3 {
+      font-family: var(--font-display);
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--dark);
+      margin-bottom: 8px;
+    }
+    .why-card p {
+      font-size: 13px;
+      color: var(--mid);
+      line-height: 1.65;
+    }
+
+    /* ── 1:1 CONSULT ── */
+    #consult { padding: 100px 0; }
+    .consult-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    .consult-images {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+    .consult-img {
+      height: 280px;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .consult-img:first-child {
+      grid-column: span 2;
+      height: 220px;
+    }
+    .consult-quote {
+      font-family: var(--font-display);
+      font-size: 22px;
+      font-style: italic;
+      font-weight: 300;
+      color: var(--dark);
+      line-height: 1.5;
+      margin: 24px 0;
+      padding-left: 20px;
+      border-left: 3px solid var(--orange);
+    }
+
+    /* ── DOCTORS ── */
+    #doctors { padding: 100px 0; background: var(--dark); }
+    #doctors .section-title { color: var(--white); }
+    #doctors .section-label { color: var(--orange); }
+    .doctors-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      margin-top: 52px;
+    }
+    .doctor-card {
+      background: #1e1e1e;
+      border-radius: 4px;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 200px 1fr;
+    }
+    .doctor-photo {
+      height: 100%;
+      min-height: 320px;
+    }
+    .doctor-photo .img-ph { height: 100%; }
+    .doctor-info {
+      padding: 32px 28px;
+    }
+    .doctor-name {
+      font-family: var(--font-display);
+      font-size: 26px;
+      font-weight: 400;
+      color: var(--white);
+      margin-bottom: 4px;
+    }
+    .doctor-title {
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 20px;
+    }
+    .doctor-credentials {
+      list-style: none;
+    }
+    .doctor-credentials li {
+      font-size: 13px;
+      color: rgba(255,255,255,0.55);
+      line-height: 1.7;
+      padding-left: 14px;
+      position: relative;
+      margin-bottom: 2px;
+    }
+    .doctor-credentials li::before {
+      content: '–';
+      position: absolute;
+      left: 0;
+      color: var(--orange);
+    }
+
+    /* ── TREATMENTS ── */
+    #treatments { padding: 100px 0; }
+    .treatments-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      margin-top: 52px;
+    }
+    .treatment-card {
+      position: relative;
+      border-radius: 4px;
+      overflow: hidden;
+      text-decoration: none;
+      display: block;
+      background: var(--dark);
+      transition: transform 0.25s;
+    }
+    .treatment-card:hover { transform: translateY(-4px); }
+    .treatment-card .img-ph {
+      height: 260px;
+      background: linear-gradient(160deg, #1e1e1e 0%, #2a2016 100%);
+    }
+    .treatment-card:nth-child(2) .img-ph { background: linear-gradient(160deg, #1a1e1e 0%, #0f1e1a 100%); }
+    .treatment-card:nth-child(3) .img-ph { background: linear-gradient(160deg, #1e1a1e 0%, #1a0f1e 100%); }
+    .treatment-card:nth-child(4) .img-ph { background: linear-gradient(160deg, #1e1e1a 0%, #1e1e0f 100%); }
+    .treatment-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.1) 60%);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 28px;
+    }
+    .treatment-cat {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 6px;
+    }
+    .treatment-name {
+      font-family: var(--font-display);
+      font-size: 28px;
+      font-weight: 400;
+      color: var(--white);
+      margin-bottom: 8px;
+    }
+    .treatment-items {
+      font-size: 13px;
+      color: rgba(255,255,255,0.55);
+      margin-bottom: 16px;
+    }
+    .treatment-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--white);
+      border: 1px solid rgba(255,255,255,0.3);
+      padding: 8px 16px;
+      border-radius: 2px;
+      align-self: flex-start;
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .treatment-card:hover .treatment-link {
+      background: var(--orange);
+      border-color: var(--orange);
+    }
+    .treatment-link::after { content: '→'; }
+
+    /* ── DEVICES ── */
+    #devices { padding: 80px 0; background: var(--light); }
+    .devices-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-top: 40px;
+    }
+    .device-card {
+      background: var(--white);
+      border-radius: 4px;
+      overflow: hidden;
+      text-align: center;
+      padding-bottom: 20px;
+    }
+    .device-img {
+      height: 160px;
+      overflow: hidden;
+    }
+    .device-img .img-ph { height: 100%; background: linear-gradient(135deg, #f8f5f0 0%, #ede8e0 100%); }
+    .device-name {
+      font-family: var(--font-display);
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--dark);
+      margin: 16px 16px 4px;
+    }
+    .device-sub {
+      font-size: 12px;
+      color: var(--mid);
+      padding: 0 16px;
+    }
+
+    /* ── CELEBRITY ── */
+    #celebrity { padding: 0; position: relative; overflow: hidden; }
+    .celeb-inner {
+      position: relative;
+      height: 440px;
+    }
+    .celeb-inner .img-ph {
+      height: 100%;
+      background: linear-gradient(160deg, #1a1000 0%, #2a1500 50%, #0f0a00 100%);
+    }
+    .celeb-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right, rgba(0,0,0,0.85) 40%, transparent 100%);
+      display: flex;
+      align-items: center;
+    }
+    .celeb-content {
+      padding: 0 80px;
+      max-width: 540px;
+    }
+    .celeb-content .section-label { margin-bottom: 12px; }
+    .celeb-title {
+      font-family: var(--font-display);
+      font-size: clamp(36px, 4.5vw, 60px);
+      font-weight: 300;
+      color: var(--white);
+      line-height: 1.1;
+      margin-bottom: 16px;
+    }
+    .celeb-title em { font-style: italic; }
+    .celeb-body {
+      font-size: 15px;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.7;
+    }
+
+    /* ── BOOK CTA ── */
+    #book { padding: 120px 0; text-align: center; background: var(--green); }
+    #book .section-label { color: rgba(255,255,255,0.5); }
+    #book .section-title { color: var(--white); text-align: center; max-width: 600px; margin: 0 auto 20px; }
+    .book-sub {
+      font-size: 16px;
+      color: rgba(255,255,255,0.55);
+      margin-bottom: 40px;
+      line-height: 1.7;
+    }
+    .book-btns {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .btn-white {
+      display: inline-block;
+      background: var(--white);
+      color: var(--green);
+      font-family: var(--font-body);
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 16px 40px;
+      border-radius: 4px;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .btn-white:hover { background: #f0ece6; transform: translateY(-1px); }
+    .btn-ghost-white {
+      display: inline-block;
+      background: transparent;
+      color: var(--white);
+      font-family: var(--font-body);
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 16px 40px;
+      border: 1px solid rgba(255,255,255,0.35);
+      border-radius: 4px;
+      transition: border-color 0.2s;
+    }
+    .btn-ghost-white:hover { border-color: var(--white); }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--dark);
+      padding: 60px 48px 40px;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 48px;
+    }
+    .footer-brand .nav-logo { font-size: 26px; display: block; margin-bottom: 12px; }
+    .footer-brand p {
+      font-size: 14px;
+      color: rgba(255,255,255,0.4);
+      line-height: 1.7;
+      max-width: 260px;
+    }
+    .footer-col h5 {
+      font-family: var(--font-body);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.4);
+      margin-bottom: 16px;
+    }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li {
+      font-size: 14px;
+      color: rgba(255,255,255,0.6);
+      line-height: 2.0;
+    }
+    .footer-col ul li a {
+      color: rgba(255,255,255,0.6);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-col ul li a:hover { color: var(--white); }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding-top: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .footer-bottom p {
+      font-size: 12px;
+      color: rgba(255,255,255,0.3);
+    }
+    .footer-lang {
+      display: flex;
+      gap: 12px;
+    }
+    .footer-lang span {
+      font-size: 12px;
+      color: rgba(255,255,255,0.3);
+      cursor: pointer;
+      transition: color 0.2s;
+    }
+    .footer-lang span:hover, .footer-lang span.active { color: var(--orange); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 1024px) {
+      nav { padding: 0 24px; }
+      .nav-links { display: none; }
+      .container { padding: 0 24px; }
+      .gallery-label, .floor-title, .gallery-grid { padding: 0 24px; }
+      .trust-bar { gap: 20px; padding: 20px 24px; }
+      .trust-divider { display: none; }
+      .about-grid, .consult-grid { grid-template-columns: 1fr; gap: 40px; }
+      .about-image { height: 360px; }
+      .doctors-grid { grid-template-columns: 1fr; }
+      .doctor-card { grid-template-columns: 160px 1fr; }
+      .why-grid { grid-template-columns: repeat(2, 1fr); }
+      .treatments-grid { grid-template-columns: 1fr; }
+      .devices-grid { grid-template-columns: repeat(2, 1fr); }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+      .celeb-content { padding: 0 40px; }
+    }
+
+    @media (max-width: 600px) {
+      .hero-title { font-size: 42px; }
+      .why-grid { grid-template-columns: 1fr; }
+      .doctor-card { grid-template-columns: 1fr; }
+      .doctor-photo { min-height: 200px; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
+      .consult-images { grid-template-columns: 1fr; }
+      .consult-img:first-child { grid-column: span 1; }
+      .celeb-content { padding: 0 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sticky CTA -->
+  <div class="sticky-cta">
+    <a href="https://forms.gle/GVxVP1ae1CD6J7st8" target="_blank">Book Consultation</a>
+  </div>
+
+  <!-- Nav -->
+  <nav>
+    <a href="#" class="nav-logo">Velli<span>cell</span></a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#treatments">Treatments</a></li>
+      <li><a href="#doctors">Doctors</a></li>
+      <li><a href="price.html">Prices</a></li>
+      <li><a href="https://forms.gle/GVxVP1ae1CD6J7st8" target="_blank" class="nav-book">Book Now</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="hero-bg">
+      <!-- Replace with: <img src="images/hero-exterior.jpg" alt="Vellicell Clinic Seoul" style="width:100%;height:100%;object-fit:cover;"> -->
+      <div class="img-ph">Hero Image — Clinic Exterior or Premium Treatment Scene</div>
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Gangnam, Seoul · Est. 2026</p>
+      <h1 class="hero-title">Vellicell<br><em>Clinic</em></h1>
+      <p class="hero-tagline">Beyond Beauty. Back to Origin.</p>
+      <div class="hero-pills">
+        <span class="hero-pill">✓ Private VIP Suites</span>
+        <span class="hero-pill">✓ Director Consultation</span>
+        <span class="hero-pill">✓ English · 中文 · 日本語</span>
+      </div>
+      <div>
+        <a href="https://forms.gle/GVxVP1ae1CD6J7st8" target="_blank" class="btn-primary">Book Consultation</a>
+        <a href="#treatments" class="btn-outline">View Treatments</a>
+      </div>
+    </div>
+    <div class="hero-scroll">Scroll</div>
+  </section>
+
+  <!-- Trust Bar -->
+  <div class="trust-bar">
+    <div class="trust-item"><span class="check">✓</span> 1 min from Gangnam Station</div>
+    <div class="trust-divider"></div>
+    <div class="trust-item"><span class="check">✓</span> Director-Only Consultation</div>
+    <div class="trust-divider"></div>
+    <div class="trust-item"><span class="check">✓</span> Same Price as Locals</div>
+    <div class="trust-divider"></div>
+    <div class="trust-item"><span class="check">✓</span> Genuine Products Only</div>
+    <div class="trust-divider"></div>
+    <div class="trust-item"><span class="check">✓</span> Multilingual Support</div>
+  </div>
+
+  <!-- About -->
+  <section id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div>
+          <p class="section-label">About Vellicell</p>
+          <h2 class="section-title">Premium Korean<br>Medical Aesthetics<br><em>in the Heart of Gangnam</em></h2>
+          <p class="section-body">Vellicell Clinic is a private high-end aesthetic clinic in Gangnam, designed for international patients who expect the same level of care as Seoul's most discerning clientele — at exactly the same price.</p>
+          <div class="about-features">
+            <div class="about-feature"><span class="dot"></span>Director consultation for every patient</div>
+            <div class="about-feature"><span class="dot"></span>One-to-one personalized treatment</div>
+            <div class="about-feature"><span class="dot"></span>Private treatment suites</div>
+            <div class="about-feature"><span class="dot"></span>Genuine products guaranteed</div>
+            <div class="about-feature"><span class="dot"></span>Same price for locals & visitors</div>
+            <div class="about-feature"><span class="dot"></span>Concierge support</div>
+          </div>
+          <div class="location-block">
+            <h4>Location & Hours</h4>
+            <p>
+              <strong>Address</strong> · 서울 서초구 강남대로 407 OPUS 407, 3F–4F<br>
+              <strong>Phone</strong> · 02-6282-8117<br>
+              <strong>Weekdays</strong> · 10:00–20:00 (Last booking 19:00)<br>
+              <strong>Weekends</strong> · 10:00–17:00 (Last booking 15:00)<br>
+              <strong>Sundays</strong> · Open 10:00–17:00
+            </p>
+          </div>
+        </div>
+        <div>
+          <div class="about-image">
+            <!-- Replace with: <img src="images/about-clinic.jpg" alt="Vellicell Clinic" style="width:100%;height:100%;object-fit:cover;"> -->
+            <div class="img-ph">About Hero Image — Clinic Building / Reception</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section id="gallery">
+    <div class="gallery-label container">
+      <p class="section-label">Clinic Space</p>
+      <h2 class="section-title">A Space Designed<br><em>for Your Privacy</em></h2>
+    </div>
+    <div class="gallery-floor">
+      <p class="floor-title">3rd Floor</p>
+      <div class="gallery-grid">
+        <div class="gallery-card">
+          <!-- Replace with: <img src="images/3f-reception.jpg" alt="Reception" style="width:100%;height:260px;object-fit:cover;"> -->
+          <div class="img-ph" style="height:260px;">3F Reception Image</div>
+          <div class="gallery-caption"><span class="star">✦</span> Reception</div>
+        </div>
+        <div class="gallery-card">
+          <div class="img-ph" style="height:260px;">3F Private Treatment Suite Image</div>
+          <div class="gallery-caption"><span class="star">✦</span> Private Treatment Suite</div>
+        </div>
+        <div class="gallery-card">
+          <div class="img-ph" style="height:260px;">3F Hallway Image</div>
+          <div class="gallery-caption"><span class="star">✦</span> Hallway</div>
+        </div>
+      </div>
+    </div>
+    <div class="gallery-floor">
+      <p class="floor-title">4th Floor</p>
+      <div class="gallery-grid">
+        <div class="gallery-card">
+          <div class="img-ph" style="height:260px;">4F Reception Image</div>
+          <div class="gallery-caption"><span class="star">✦</span> Reception</div>
+        </div>
+        <div class="gallery-card">
+          <div class="img-ph" style="height:260px;">4F Private Treatment Suite Image</div>
+          <div class="gallery-caption"><span class="star">✦</span> Private Treatment Suite</div>
+        </div>
+        <div class="gallery-card">
+          <div class="img-ph" style="height:260px;">4F Hallway Image</div>
+          <div class="gallery-caption"><span class="star">✦</span> Hallway</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose -->
+  <section id="why">
+    <div class="container">
+      <p class="section-label">Why Patients Choose Us</p>
+      <h2 class="section-title">The Vellicell<br><em>Difference</em></h2>
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="why-icon">🔒</div>
+          <h3>Private VIP Rooms</h3>
+          <p>Every patient receives a fully private treatment suite — no shared spaces, no waiting in public areas.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">👨‍⚕️</div>
+          <h3>Director Consultation</h3>
+          <p>Your treatment plan is designed personally by our clinic directors — not delegated to staff.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">✅</div>
+          <h3>Genuine Products</h3>
+          <p>We use only certified, authentic products. No substitutions, no grey-market imports.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">🌐</div>
+          <h3>Multilingual Support</h3>
+          <p>Full support in English, Chinese, and Japanese — from consultation through aftercare.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">💰</div>
+          <h3>Same Price Policy</h3>
+          <p>International patients pay exactly the same price as Korean patients. No tourist markup.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">📍</div>
+          <h3>Prime Gangnam Location</h3>
+          <p>1 minute from Gangnam Station — easy to access, discreet, and centrally located.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">⭐</div>
+          <h3>Premium Experience</h3>
+          <p>From arrival to aftercare, every touchpoint is designed for comfort and discretion.</p>
+        </div>
+        <div class="why-card" style="background:var(--orange); border-bottom-color: transparent;">
+          <div class="why-icon" style="background:rgba(255,255,255,0.15);">📋</div>
+          <h3 style="color:var(--white);">Ready to visit?</h3>
+          <p style="color:rgba(255,255,255,0.75); margin-bottom:16px;">Book your consultation — it takes under 2 minutes.</p>
+          <a href="https://forms.gle/GVxVP1ae1CD6J7st8" target="_blank" style="display:inline-block; background:var(--white); color:var(--orange); font-size:12px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; text-decoration:none; padding:10px 20px; border-radius:4px;">Book Now →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 1:1 Consult -->
+  <section id="consult">
+    <div class="container">
+      <div class="consult-grid">
+        <div class="consult-images">
+          <div class="consult-img">
+            <!-- Replace with: <img src="images/consult-1.jpg" alt="Personalized skin evaluation" style="width:100%;height:100%;object-fit:cover;"> -->
+            <div class="img-ph light" style="height:220px;">Consultation Scene 1 — Skin Evaluation</div>
+          </div>
+          <div class="consult-img" style="height:280px;">
+            <div class="img-ph light" style="height:100%;">Consultation Scene 2 — Treatment Planning Left</div>
+          </div>
+          <div class="consult-img" style="height:280px;">
+            <div class="img-ph light" style="height:100%;">Consultation Scene 3 — Treatment Planning Right</div>
+          </div>
+        </div>
+        <div>
+          <p class="section-label">Our Approach</p>
+          <h2 class="section-title">1:1 Personalized<br><em>Consultation</em></h2>
+          <blockquote class="consult-quote">"We assess each patient's condition and collaboratively design a treatment plan tailored to individual characteristics and needs."</blockquote>
+          <p class="section-body">At Vellicell, your consultation is always conducted by the director personally. We take into account the overall condition and balance of the skin — never a one-size-fits-all approach.</p>
+          <br>
+          <a href="https://forms.gle/GVxVP1ae1CD6J7st8" target="_blank" class="btn-primary" style="margin-top:16px;">Book Your Consultation</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Doctors -->
+  <section id="doctors">
+    <div class="container">
+      <p class="section-label">Medical Team</p>
+      <h2 class="section-title">Meet Our<br><em>Directors</em></h2>
+      <div class="doctors-grid">
+        <div class="doctor-card">
+          <div class="doctor-photo">
+            <!-- Replace with: <img src="images/dr-kim-gun.jpg" alt="Dr. Kim Gun" style="width:100%;height:100%;object-fit:cover;"> -->
+            <div class="img-ph">Dr. Kim Gun Photo</div>
+          </div>
+          <div class="doctor-info">
+            <h3 class="doctor-name">Dr. Kim Gun</h3>
+            <p class="doctor-title">Director · Dermatology & Aesthetics</p>
+            <ul class="doctor-credentials">
+              <li>Graduated from Korea University College of Medicine</li>
+              <li>Internship & Residency, Korea University Medical Center</li>
+              <li>Former Representative Director, Maypure Clinic Suji</li>
+              <li>Member, Korean Association for Laser, Dermatology & Trichology</li>
+              <li>Member, Korea Filler Education and Research Academy</li>
+              <li>Member, Korea Academy of Facelift and Contouring</li>
+              <li>Member, Korean Society for the Study of Obesity</li>
+            </ul>
+          </div>
+        </div>
+        <div class="doctor-card">
+          <div class="doctor-photo">
+            <!-- Replace with: <img src="images/dr-lee-yoon-hyun.jpg" alt="Dr. Lee Yoon-hyun" style="width:100%;height:100%;object-fit:cover;"> -->
+            <div class="img-ph">Dr. Lee Yoon-hyun Photo</div>
+          </div>
+          <div class="doctor-info">
+            <h3 class="doctor-name">Dr. Lee Yoon-hyun</h3>
+            <p class="doctor-title">Director · Medical Aesthetics</p>
+            <ul class="doctor-credentials">
+              <li>Former Clinical Instructor, Trauma Surgery, Uijeongbu St. Mary's Hospital</li>
+              <li>Former Secretary, Training Committee, Korean Society of Traumatology</li>
+              <li>Former Chief of Surgery, Armed Forces Seoul District Hospital</li>
+              <li>Former Professor of Severe Trauma, Seoul National University Bundang Hospital</li>
+              <li>Former Director, Public Health Division, Armed Forces Medical Command</li>
+              <li>Former Presidential Medical Director (Chief Medical Officer, Blue House)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Treatments -->
+  <section id="treatments">
+    <div class="container">
+      <p class="section-label">Popular Treatments</p>
+      <h2 class="section-title">What Would You<br><em>Like to Improve?</em></h2>
+      <div class="treatments-grid">
+        <a href="price.html#lifting" class="treatment-card">
+          <div class="img-ph" style="height:280px;">Lifting Treatment Image</div>
+          <div class="treatment-overlay">
+            <p class="treatment-cat">Lifting</p>
+            <h3 class="treatment-name">Lifting</h3>
+            <p class="treatment-items">Ultherapy · Thermage · Titanium · Volnewmer · Shurink · InMode · Sofwave</p>
+            <span class="treatment-link">View Prices</span>
+          </div>
+        </a>
+        <a href="price.html#skin-booster" class="treatment-card">
+          <div class="img-ph" style="height:280px;">Skin Booster Treatment Image</div>
+          <div class="treatment-overlay">
+            <p class="treatment-cat">Skin</p>
+            <h3 class="treatment-name">Skin Booster</h3>
+            <p class="treatment-items">Rejuran · Juvelook · SKINVIVE · REVIVE · Sculptra · HILO WAVE</p>
+            <span class="treatment-link">View Prices</span>
+          </div>
+        </a>
+        <a href="price.html#pigmentation" class="treatment-card">
+          <div class="img-ph" style="height:280px;">Pigmentation Treatment Image</div>
+          <div class="treatment-overlay">
+            <p class="treatment-cat">Pigmentation</p>
+            <h3 class="treatment-name">Pigmentation</h3>
+            <p class="treatment-items">Pico · Clarity II · Derma-V · CO2 · Dual / Triple Toning</p>
+            <span class="treatment-link">View Prices</span>
+          </div>
+        </a>
+        <a href="price.html#botox" class="treatment-card">
+          <div class="img-ph" style="height:280px;">Botox & Filler Treatment Image</div>
+          <div class="treatment-overlay">
+            <p class="treatment-cat">Contouring</p>
+            <h3 class="treatment-name">Botox & Filler</h3>
+            <p class="treatment-items">Wrinkle · Masseter · Skin Botox · Korean & Imported Fillers</p>
+            <span class="treatment-link">View Prices</span>
+          </div>
+        </a>
+      </div>
+      <div style="text-align:center; margin-top:32px;">
+        <a href="price.html" class="btn-primary">View Full Price List</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Devices -->
+  <section id="devices">
+    <div class="container">
+      <p class="section-label">Our Equipment</p>
+      <h2 class="section-title">Premium Lifting<br><em>Devices</em></h2>
+      <div class="devices-grid">
+        <div class="device-card">
+          <div class="device-img">
+            <!-- Replace with: <img src="images/device-volnewmer.jpg" alt="Volnewmer" style="width:100%;height:100%;object-fit:contain;padding:20px;"> -->
+            <div class="img-ph light">Volnewmer Device Image</div>
+          </div>
+          <h4 class="device-name">Volnewmer</h4>
+          <p class="device-sub">볼뉴머</p>
+        </div>
+        <div class="device-card">
+          <div class="device-img">
+            <div class="img-ph light">Shurink Universe Device Image</div>
+          </div>
+          <h4 class="device-name">Shurink Universe</h4>
+          <p class="device-sub">슈링크 유니버스</p>
+        </div>
+        <div class="device-card">
+          <div class="device-img">
+            <div class="img-ph light">InMode Device Image</div>
+          </div>
+          <h4 class="device-name">InMode</h4>
+          <p class="device-sub">인모드</p>
+        </div>
+        <div class="device-card">
+          <div class="device-img">
+            <div class="img-ph light">Ultherapy Prime Device Image</div>
+          </div>
+          <h4 class="device-name">Ultherapy Prime</h4>
+          <p class="device-sub">울쎄라피 프라임</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Celebrity -->
+  <section id="celebrity">
+    <div class="celeb-inner">
+      <!-- Replace with: <img src="images/celebrity-bg.jpg" alt="K-Pop & Celebrity" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;"> -->
+      <div class="img-ph" style="height:440px;">K-Pop & Celebrity Section Background Image (Polaroid collage)</div>
+      <div class="celeb-overlay">
+        <div class="celeb-content">
+          <p class="section-label">Special Reference</p>
+          <h2 class="celeb-title">The Choice<br>of <em>Icons</em></h2>
+          <p class="celeb-body">For your most radiant moments — chosen by global icons. Vellicell Clinic is trusted by K-Pop artists and celebrities who demand both discretion and results.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Book CTA -->
+  <section id="book">
+    <div class="container">
+      <p class="section-label">Get Started</p>
+      <h2 class="section-title">Book Your<br><em>Consultation</em></h2>
+      <p class="book-sub">
+        Fill out our simple consultation form and our team will<br>
+        get back to you to confirm your appointment.
+      </p>
+      <div class="book-btns">
+        <a href="https://forms.gle/GVxVP1ae1CD6J7st8" target="_blank" class="btn-white">Book Consultation →</a>
+        <a href="price.html" class="btn-ghost-white">View Price List</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="nav-logo">Velli<span style="color:var(--orange)">cell</span></a>
+        <p>Private High-End Clinic<br>Premium Korean Medical Aesthetics<br>Gangnam, Seoul</p>
+      </div>
+      <div class="footer-col">
+        <h5>Treatments</h5>
+        <ul>
+          <li><a href="price.html#lifting">Lifting</a></li>
+          <li><a href="price.html#skin-booster">Skin Booster</a></li>
+          <li><a href="price.html#botox">Botox</a></li>
+          <li><a href="price.html#filler">Filler</a></li>
+          <li><a href="price.html#pigmentation">Pigmentation</a></li>
+          <li><a href="price.html#diet-injection">Diet Injection</a></li>
+          <li><a href="price.html">Full Price List →</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Visit</h5>
+        <ul>
+          <li>서초구 강남대로 407</li>
+          <li>OPUS 407, 3F–4F</li>
+          <li>&nbsp;</li>
+          <li>Tel: 02-6282-8117</li>
+          <li>&nbsp;</li>
+          <li>Mon–Fri: 10:00–20:00</li>
+          <li>Sat–Sun: 10:00–17:00</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Book</h5>
+        <ul>
+          <li><a href="https://forms.gle/GVxVP1ae1CD6J7st8" target="_blank">Consultation Form</a></li>
+          <li>&nbsp;</li>
+          <li>English · 中文 · 日本語</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Vellicell Clinic Seoul. All rights reserved. · *VAT not included in listed prices unless stated.</p>
+      <div class="footer-lang">
+        <span class="active">EN</span>
+        <span>中文</span>
+        <span>日本語</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
