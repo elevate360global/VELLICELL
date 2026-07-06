@@ -225,8 +225,17 @@
       padding: 6px 14px;
       border-radius: 20px;
     }
+    .hero-btns {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
     .btn-primary {
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 200px;
       background: var(--orange);
       color: var(--white);
       font-family: var(--font-body);
@@ -241,7 +250,10 @@
     }
     .btn-primary:hover { background: var(--orange-light); transform: translateY(-1px); }
     .btn-outline {
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 200px;
       background: transparent;
       color: var(--white);
       font-family: var(--font-body);
@@ -254,7 +266,6 @@
       border: 1px solid rgba(255,255,255,0.4);
       border-radius: 4px;
       transition: border-color 0.2s, background 0.2s;
-      margin-left: 14px;
     }
     .btn-outline:hover { border-color: var(--white); background: rgba(255,255,255,0.08); }
     .hero-scroll {
@@ -904,7 +915,7 @@
         <span class="hero-pill">✓ Director Consultation</span>
         <span class="hero-pill">✓ English · 中文 · 日本語</span>
       </div>
-      <div>
+      <div class="hero-btns">
         <a href="https://forms.gle/GVxVP1ae1CD6J7st8" target="_blank" class="btn-primary">Book Consultation</a>
         <a href="#treatments" class="btn-outline">View Treatments</a>
       </div>
